@@ -44,4 +44,8 @@ class RegexTest {
 		assertTrue(form.userEmail("abc.xyz@bl.co.in"));
 	}
 
+	@Test
+	public void testNumberValid_Success() {
+		assertTrue(form.userNumber("91 9370636399"));
+	}
 }

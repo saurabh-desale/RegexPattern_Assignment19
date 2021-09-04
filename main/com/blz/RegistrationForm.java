@@ -18,6 +18,10 @@ public class RegistrationForm {
 		return IsValidPattern(userEmail, Constants.MAIL_REGEX);
 	}
 
+	public boolean userNumber(String userNumber) {
+		return IsValidPattern(userNumber, Constants.NUMBER_REGEX);
+	}
+
 	public static boolean IsValidPattern(String input, String regex) {
 		return Pattern.compile(regex).matcher(input).matches();
 	}
