@@ -21,6 +21,18 @@ class RegexTest {
 	public void testNameInvalidMinThreeCharacter_Fail() {
 		assertFalse(form.firstName("Om"));
 	}
+	@Test
+	public void testLastNameValid_Success() {
+		assertTrue(form.lastName("Saurabh"));
+	}
+	@Test
+	public void testLastNameInValidStartCap_Fail() {
+		assertFalse(form.lastName("saurabh"));
+	}
+	@Test
+	public void testLastNameInvalidMinThreeCharacter_Fail() {
+		assertFalse(form.lastName("Om"));
+	}
 	
 	
 }
