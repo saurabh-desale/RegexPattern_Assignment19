@@ -48,4 +48,30 @@ class RegexTest {
 	public void testNumberValid_Success() {
 		assertTrue(form.userNumber("91 9370636399"));
 	}
+
+	@Test
+	public void testPassValid_Success() {
+		assertTrue(form.userPass("Cristaino07@#"));
+	}
+
+	@Test
+	public void testPassInvalidGap_Fail() {
+		assertFalse(form.userPass("Cristaino 07@#"));
+	}
+	@Test
+	public void testPassInvalidAtleastEightCharacter_Fail() {
+		assertFalse(form.userPass("Cri07@#"));
+	}
+	@Test
+	public void testPassInvalidOneUpperCase_Fail() {
+		assertFalse(form.userPass("ristaino07@#"));
+	}
+	@Test
+	public void testPassInvalidAtLeastOneNumericNumber_Fail() {
+		assertFalse(form.userPass("Cristaino@#"));
+	}
+	@Test
+	public void testPassInvalidAtLeastOneSpecialCharacter_Fail() {
+		assertFalse(form.userPass("Cristaino012"));
+	}
 }

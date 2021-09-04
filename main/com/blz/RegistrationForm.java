@@ -14,6 +14,10 @@ public class RegistrationForm {
 
 	}
 
+	public boolean userPass(String userPass) {
+		return IsValidPattern(userPass, Constants.PASSWORD_REGEX);
+	}
+
 	public boolean userEmail(String userEmail) {
 		return IsValidPattern(userEmail, Constants.MAIL_REGEX);
 	}
